@@ -1,46 +1,215 @@
 body {
-	background-color: #fcfcfc;
+	background-color: #dfdfdf;
 	margin:0;
+	font-family: Arial, Helvetica, sans-serif;
 }
 
+html,body {
+	height:100%;
+}
+
+/* Top banner */
 .banner {
-	width: 100%;
-	margin: 0px;
+	position: relative;
+	width: 98%;
 	padding: 1%;
 	height: 80px;
 	background-color: #4b6344;
+	overflow: hidden;
 }
 
 #banner_text {
 	color: white;
-	font-family: Arial;
 	font-size:24px;
 }
 
-nav ul {
-	display: flex;
-	margin: 0;
-	padding: 0;
-	list-style-type: none;
+/** Top banner navigation bar **/
+.navigation_bar {
+	float: right;
+	position: relative;
+	top: -65px;
+	right: 40px;
+	padding-bottom: 15px;
+	padding-top: 13px;
+	background-color: #555555;
+	margin: 0px;
 }
 
-nav li {
-	cursor: pointer;
-	padding: 12px;
-	padding-left: 25px;
-	padding-right: 25px;
-}
-
-li.selected {
+.navigation_bar a.active {
 	background-color: #717171;
 }
-/* Otherwise */
-li {
-	background-color: #555555;
+
+.navigation_bar a:hover {
+	color: #afafaf;
+	transition: 0.5s;
 }
 
-li {
-	/* Nav item */
-	color: white; 
+/* Navigation item */
+.navigation_bar a {
+	text-decoration: none;
+	text-align: center;
+	font-size: 14px;
+	padding-top: 15px;
+	padding-bottom: 16px;
+	padding-left: 30px;
+	padding-right: 30px;
+	color: white;
+}
+/** Dropdown selector **/
+.hamburger {
+	display: none;
+	position: relative;
+	float: right;
+	text-decoration: none;
+	right: 20px;
+	top: -24px;
+	color: white;
+}
+
+#dropdown_menu {
+	visibility: hidden;
+	display: inline-block;
+	background-color: #4b6344;
+	position: fixed; /* Stay on screen */
+	z-index:1000; /* Always on top */
+	right: 0px;
+	top:40px;
+	width:100%;
+	text-align: center;
+}
+
+#dropdown_menu a {
+	text-decoration: none;
 	font-family: Arial;
+	font-size: 15px;
+	width:100%;
+	display:block;
+	margin:7px;
+	color:white;
+}
+
+#dropdown_menu a:hover {
+	color: #afafaf;
+	transition: 0.5s;
+}
+
+/** Buttons **/
+#deals_button {
+	display: inline-block;
+	text-decoration: none;
+	background-color: #4b6344;
+	color: white;
+	font-family: Arial, Helvetica, sans-serif;
+	padding:7px 17px;
+	cursor: pointer;
+	border: 1px solid black;
+	margin-bottom: 40px;
+}
+
+#deals_button:hover {
+	background-color: #4b8844;
+}
+
+
+/** Global content frame **/
+
+.content_wrapper {
+	position:relative;
+	background-color:#dfdfdf;
+	height:100%;
+}
+
+.content {
+	margin:auto;
+	justify-content: center;
+	text-align: center;
+	padding-top: 20px;
+	padding-left: 50px;
+	padding-right: 50px;
+	height:100%;
+	display:block;
+	width:70%;
+}
+
+/* Suitable for horizontally stacking divs */
+.horizontal_container {
+	text-align: center;
+}
+
+.horizontally_stacked {
+	display: inline-block;
+}
+
+.vertically_centered {
+	vertical-align: middle;
+}
+
+
+/****** Carousel ******/
+
+
+.carousel {
+	width:85%;
+	background-color: #1a1a1a;
+}
+
+.carousel_item {
+	background-color:#4b6344;
+	margin: 10px;
+	padding:100px;
+}
+
+.carousel_arrow {
+	position:relative;
+	padding-top:110px;
+	padding-bottom:110px;
+	padding-left:0px;
+	padding-right:0px;
+	top:-115px;
+	width:20px;
+}
+
+
+/******* Media Queries *******/
+
+@media screen and (max-width: 600px) {
+	/* Reduce 'New Zealand Adventures' font size */
+	#banner_text {
+		font-size:10px;
+	}
+	/* Reduce banner height */
+	.banner {
+		height:35px;
+	}
+	/* Hide navbar */
+	.navigation_bar {
+		visibility: hidden;
+		display: none;
+	}
+	/* Show hamburger */
+	.hamburger {
+		display: block;
+		/*float: right;
+		display: block;*/
+	}
+}
+
+@media screen and (max-width: 736px) {
+	/* reposition carousel arrows */
+	.carousel_arrow {
+		padding-top: 225px;
+		padding-bottom: 225px;
+		top:-230px;
+	}
+
+}
+
+@media screen and (max-width: 367px) {
+	/* reposition carousel arrows */
+	.carousel_arrow {
+		padding-top: 340px;
+		padding-bottom: 340px;
+		top:-350px;
+	}
+
 }
