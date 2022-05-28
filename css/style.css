@@ -171,12 +171,84 @@ html,body {
 #experiences_south {
 	background-color: green;
 	float:right;
+
 	width:200px;
 	height:200px;
 }
 
-/****** Carousel ******/
+/** Deals page specific **/
 
+#deal_wrapper {
+	width: 100%;
+	height: 150px;
+	margin-top:50px;
+}
+
+.deal_entry {
+	background-color: #850808;
+	width: 650px;
+	height: 150px;
+	margin: auto;
+}
+
+.deal_image {
+	float: left;
+	height:150px;
+	width:150px;
+	background-color: green;
+}
+
+.deal_price {
+	float: right;
+	height: 130px;
+	width: 60px;
+	padding-top:20px;
+	background-color: red;
+	text-align: center;
+}
+
+.deal_description {
+	width:420px;
+	height:150px;
+	display:inline-block;
+	margin:auto;
+	background-color:orange;
+	padding-left:10px;
+	padding-right:10px;
+}
+
+/** Review page specific **/
+
+.review_wrapper {
+	padding-top:10px;
+	width: 530px;
+	height: 110px;
+	margin-top: 50px;
+	background-color: #4b6344;
+	margin: auto;
+	text-align:left;
+	color:white;
+	font-family:Arial;
+}
+
+.review_meta {
+	float:left;
+	padding-right:15px;
+	padding-left:20px;
+	margin-top:0;
+}
+
+#review_post {
+	width: 530px;
+	height: 230px;
+	padding: 1px;
+	margin: auto;
+	margin-bottom: 20px;
+	background-color: #4b6344;
+	color:white;
+}
+
+/****** Carousel ******/
 
 .carousel {
 	width:85%;
@@ -224,6 +296,14 @@ html,body {
 	}
 	#home_blurb {
 		top:5px;
+	}
+}
+
+@media screen and (max-width: 680px) {
+	/* break experiences pages north/south island divs */
+	#experiences_island_wrapper {
+		display:none;
+		visibility:hidden;
 	}
 }
 
