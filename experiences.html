@@ -1,43 +1,116 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>New Zealand Adventures</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<!-- Sheets -->
+		<link rel="stylesheet" href="css/style.css"/>
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+		<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+		<!-- Scripts -->
+		<script type="text/javascript" src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
+		<script type="text/javascript" src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+		<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+		<script type="text/javascript" src="js/script.js"></script> 
+    <script>
+			function carouselInit() {
+				// Initialise carousel
+				$(document).ready(function(){
+					$('#carousel1').slick({
+						slidesToShow: 2,
+						slidesToScroll: 1,
+						prevArrow: $('.prev1'),
+						nextArrow: $('.next1'),
+						autoplay: true,
+						autoplaySpeed: 5000
+					});
+				});
+        $(document).ready(function(){
+					$('#carousel2').slick({
+						slidesToShow: 2,
+						slidesToScroll: 1,
+						prevArrow: $('.prev2'),
+						nextArrow: $('.next2'),
+						autoplay: true,
+						autoplaySpeed: 5000
+					});
+				});
+			}
+    </script>
+	</head>
+	<body onload="carouselInit()">
+		<div class="banner">
+			<div id="banner_text">
+				New<br>Zealand<br>Adventures
+			</div>
+			<div class="navigation_bar">
+				<a href="index.html">Home</a>
+				<a href="experiences.html" class="active">Experiences</a>
+				<a href="deals.html">Deals</a>
+				<a href="reviews.html">Reviews</a>
+			</div>
+			<!-- Responsive hamburger -->
+			<a class="hamburger dropdown_toggle">
+				<i onclick="dropdown()" class="fa fa-bars"></i>
+				<div id="dropdown_menu">
+					<a href="index.html">Home</a>
+					<a href="experiences.html">Experiences</a>
+					<a href="deals.html">Deals</a>
+					<a href="reviews.html">Reviews</a>
+				</div>
+			</a>
+		</div>
+		<div class="content_wrapper">
+			<div class="content">
+    <!-- First carousel    <div id="experiences_island_wrapper">
+          <div class="horizontally_stacked" id="experiences_north">
+            a
+          </div>
+          <div class="horizontally_stacked" id="experiences_south">
+            a
+          </div>
+        </div>
+         -->
 
-<!doctype html>
-<title>Example</title>
-<style>
-  * {
-   box-sizing: border-box; 
-  }
-  body {
-    margin: 0;
-  }
-  #main {
-    display: flex;
-    min-height: calc(100vh - 40vh);
-  }
-  #main > article {
-    flex: 1;
-  }
-  #main > nav, 
-  #main > aside {
-    flex: 0 0 20vw;
-    background: beige;
-  }
-  #main > nav {
-    order: -1;
-  }
-  header, article, nav, aside {
-    padding: 1em;
-  }
-  header {
-    background: yellowgreen;
-    height: 20vh;
-  }
-</style>
-<body>
-<header>Header</header>
-<div id="main">
-<article>Article</article>
-<nav>Nav</nav>
-<aside>Aside</aside>
-</div>
-<footer>Footer</footer>
-<script defer src="https://static.cloudflareinsights.com/beacon.min.js/v652eace1692a40cfa3763df669d7439c1639079717194" integrity="sha512-Gi7xpJR8tSkrpF7aordPZQlW2DLtzUlZcumS8dMQjwDHEnw9I7ZLyiOj/6tZStRBGtGgN6ceN6cMH8z7etPGlw==" data-cf-beacon='{"rayId":"710f117c4d75a8b3","version":"2021.12.0","r":1,"token":"f95a87206c5140fb90f2612ffd79569d","si":100}' crossorigin="anonymous"></script>
-</body> 
+         <!-- Second carousel - North island experiences -->
+				<div style="white-space:nowrap; overflow:hidden; margin:0;">
+          <h2>North Island Experiences</h2>
+					<div class="prev1 horizontally_stacked carousel_arrow"><i class="fas fa-angle-left"></i></div>
+					<div id="carousel1" class="carousel" style="display: inline-block;">
+						<div class="carousel_item">content 1</div>
+						<div class="carousel_item">content 2</div>
+						<div class="carousel_item">content 3</div>
+						<div class="carousel_item">content 4</div>
+						<div class="carousel_item">content 5</div>
+						<div class="carousel_item">content 6</div>
+						<div class="carousel_item">content 7</div>
+						<div class="carousel_item">content 8</div>
+					</div>
+					<div class="next1 horizontally_stacked carousel_arrow"><i class="fas fa-angle-right"></i></div>
+				</div>
+
+        <!-- Second carousel - South island experiences -->
+				<div style="white-space:nowrap; overflow:hidden; margin-top:-80px;">
+          <h2>South Island Experiences</h2>
+					<div class="prev2 horizontally_stacked carousel_arrow"><i class="fas fa-angle-left"></i></div>
+					<div id="carousel2" class="carousel" style="display: inline-block;">
+						<div class="carousel_item">content 1</div>
+						<div class="carousel_item">content 2</div>
+						<div class="carousel_item">content 3</div>
+						<div class="carousel_item">content 4</div>
+						<div class="carousel_item">content 5</div>
+						<div class="carousel_item">content 6</div>
+						<div class="carousel_item">content 7</div>
+						<div class="carousel_item">content 8</div>
+					</div>
+					<div class="next2 horizontally_stacked carousel_arrow"><i class="fas fa-angle-right"></i></div>
+				</div>
+
+
+      </div>
+		</div>
+
+	</body>
+
+
+</html>

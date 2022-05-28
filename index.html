@@ -12,8 +12,23 @@
 		<script type="text/javascript" src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
 		<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
 		<script type="text/javascript" src="js/script.js"></script>
+		<script>
+			function carouselInit() {
+				// Initialise carousel
+				$(document).ready(function(){
+					$('#carousel').slick({
+						slidesToShow: 2,
+						slidesToScroll: 1,
+						prevArrow: $('.prev'),
+						nextArrow: $('.next'),
+						autoplay: true,
+						autoplaySpeed: 5000
+					});
+				});
+			}
+		</script>
 	</head>
-	<body>
+	<body onload="carouselInit()">
 		<div class="banner">
 			<div id="banner_text">
 				New<br>Zealand<br>Adventures
@@ -41,7 +56,7 @@
 				<!-- First carousel -->
 				<div style="white-space:nowrap; overflow:hidden; margin:0;">
 					<div class="prev horizontally_stacked carousel_arrow"><i class="fas fa-angle-left"></i></div>
-					<div class="carousel" style="display:inline-block;">
+					<div id="carousel" class="carousel" style="display:inline-block;">
 						<div class="carousel_item">content 1</div>
 						<div class="carousel_item">content 2</div>
 						<div class="carousel_item">content 3</div>
@@ -53,23 +68,13 @@
 					</div>
 					<div class="next horizontally_stacked carousel_arrow"><i class="fas fa-angle-right"></i></div>
 				</div>
-				<!-- Horizontally stacked text -->
-				<div style="white-space:nowrap;width:80%;background-color:yellow;margin:auto">
-					<div class="horizontally_stacked">
-						<div style="background-color:green;">
-							<span style="text-align:left">bbb</span>
-						</div>
-					</div>
-					<div class="horizontally_stacked">
-						<div style="background-color:red;">
-						aaa
-						</div>
-					</div>
+				<div id="home_blurb">
+					<p style="font-size:16px">Welcome to New Zealand Adventures the best site to find the best activities New Zealand has to offer.</p>
 				</div>
 				<!-- Ending content -->
 				<h1>Plan your trip right now!</h1>
 				<h4>Check out our deals!</h4>
-				<button id="deals_button">Deals</button>
+				<button onclick="window.location.href='deals.html'" id="deals_button">Deals</button>
 			</div>
 		</div>
 

@@ -145,6 +145,36 @@ html,body {
 }
 
 
+/** Home page specific elements **/
+#home_blurb {
+	position:relative;
+	top:-50px;
+}
+
+/** Experiences page specific **/
+
+#experiences_island_wrapper {
+	position:relative;
+	padding-top:50px;
+	width:500px;
+	margin:auto;
+}
+
+#experiences_north {
+	background-color: yellow;
+	float: left;
+	
+	width:200px;
+	height:200px;
+}
+
+#experiences_south {
+	background-color: green;
+	float:right;
+	width:200px;
+	height:200px;
+}
+
 /****** Carousel ******/
 
 
@@ -191,6 +221,9 @@ html,body {
 		display: block;
 		/*float: right;
 		display: block;*/
+	}
+	#home_blurb {
+		top:5px;
 	}
 }
 
