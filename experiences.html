@@ -4,39 +4,39 @@
 		<title>New Zealand Adventures</title>
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<!-- Sheets -->
-		<link rel="stylesheet" href="css/style.css"/>
-		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+		<link rel="stylesheet" type="text/css" href="css/style.css"/>
+		<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
 		<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
 		<!-- Scripts -->
 		<script type="text/javascript" src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
 		<script type="text/javascript" src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
 		<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
 		<script type="text/javascript" src="js/script.js"></script> 
-    <script>
-			function carouselInit() {
-				// Initialise carousel
-				$(document).ready(function(){
-					$('#carousel1').slick({
-						slidesToShow: 2,
-						slidesToScroll: 1,
-						prevArrow: $('.prev1'),
-						nextArrow: $('.next1'),
-						autoplay: true,
-						autoplaySpeed: 5000
+		<script>
+				function carouselInit() {
+					// Initialise carousel
+					$(document).ready(function(){
+						$('#carousel1').slick({
+							slidesToShow: 2,
+							slidesToScroll: 1,
+							prevArrow: $('.prev1'),
+							nextArrow: $('.next1'),
+							autoplay: true,
+							autoplaySpeed: 5000
+						});
 					});
-				});
-        $(document).ready(function(){
-					$('#carousel2').slick({
-						slidesToShow: 2,
-						slidesToScroll: 1,
-						prevArrow: $('.prev2'),
-						nextArrow: $('.next2'),
-						autoplay: true,
-						autoplaySpeed: 5000
+					$(document).ready(function(){
+						$('#carousel2').slick({
+							slidesToShow: 2,
+							slidesToScroll: 1,
+							prevArrow: $('.prev2'),
+							nextArrow: $('.next2'),
+							autoplay: true,
+							autoplaySpeed: 5000
+						});
 					});
-				});
-			}
-    </script>
+				}
+		</script>
 	</head>
 	<body onload="carouselInit()">
 		<div class="banner">
@@ -87,14 +87,30 @@
           <h2>North Island Experiences</h2>
 					<div class="prev1 horizontally_stacked carousel_arrow"><i class="fas fa-angle-left"></i></div>
 					<div id="carousel1" class="carousel" style="display: inline-block;">
-						<div class="carousel_item">content 1</div>
-						<div class="carousel_item">content 2</div>
-						<div class="carousel_item">content 3</div>
-						<div class="carousel_item">content 4</div>
-						<div class="carousel_item">content 5</div>
-						<div class="carousel_item">content 6</div>
-						<div class="carousel_item">content 7</div>
-						<div class="carousel_item">content 8</div>
+						<div class="carousel_item">
+							<img src="images/north_auckland_habour_bridge.png" width="400px" height="200px" alt="north_auckland_habour_bridge">
+						</div>
+						<div class="carousel_item">
+							<img src="images/north_mountain_and_seashore.png" width="400px" height="200px" alt="north_mountain_and_seashore">
+						</div>
+						<div class="carousel_item">
+							<img src="images/north_pukaki_pukaki.png" width="400px" height="200px" alt="north_pukaki_pukaki">
+						</div>
+						<div class="carousel_item">
+							<img src="images/north_auckland_city.png" width="400px" height="200px" alt="north_auckland_city">
+						</div>
+						<div class="carousel_item">
+							<img src="images/north_landscape_wharaiki_beach.png" width="400px" height="200px" alt="north_landscape_wharaiki_beach">
+						</div>
+						<div class="carousel_item">
+							<img src="images/north_aerial_view_middle_of_green_trees.png" width="400px" height="200px" alt="north_aerial_view_middle_of_green_trees">
+						</div>
+						<div class="carousel_item">
+							<img src="images/north_hike_beach_mountain.png" width="400px" height="200px" alt="north_hike_beach_mountain">
+						</div>
+						<div class="carousel_item">
+							<img src="images/north_lake_harris.png" width="400px" height="200px" alt="north_lake_harris">
+						</div>
 					</div>
 					<div class="next1 horizontally_stacked carousel_arrow"><i class="fas fa-angle-right"></i></div>
 				</div>
@@ -104,14 +120,30 @@
           <h2>South Island Experiences</h2>
 					<div class="prev2 horizontally_stacked carousel_arrow"><i class="fas fa-angle-left"></i></div>
 					<div id="carousel2" class="carousel" style="display: inline-block;">
-						<div class="carousel_item">content 1</div>
-						<div class="carousel_item">content 2</div>
-						<div class="carousel_item">content 3</div>
-						<div class="carousel_item">content 4</div>
-						<div class="carousel_item">content 5</div>
-						<div class="carousel_item">content 6</div>
-						<div class="carousel_item">content 7</div>
-						<div class="carousel_item">content 8</div>
+						<div class="carousel_item">
+							<img src="images/south_seashore.png" width="400px" height="200px" alt="south_seashore">
+						</div>
+						<div class="carousel_item">
+							<img src="images/south_body_of_water_surrounded_by_mountains.png" width="400px" height="200px" alt="south_body_of_water_surrounded_by_mountains">
+						</div>
+						<div class="carousel_item">
+							<img src="images/south_pathway_through_ice_mountain.png" width="400px" height="200px" alt="south_pathway_through_ice_mountain">
+						</div>
+						<div class="carousel_item">
+							<img src="images/south_brown_and_white_mountain.png" width="400px" height="200px" alt="south_brown_and_white_mountain">
+						</div>
+						<div class="carousel_item">
+							<img src="images/south_mountain_by_ocean.png" width="400px" height="200px" alt="south_mountain_by_ocean">
+						</div>
+						<div class="carousel_item">
+							<img src="images/south_river_between_trees.png" width="400px" height="200px" alt="south_river_between_trees">
+						</div>
+						<div class="carousel_item">
+							<img src="images/south_sillhouette.png" width="400px" height="200px" alt="south_sillhouette">
+						</div>
+						<div class="carousel_item">
+							<img src="images/south_calm_body_of_water.png" width="400px" height="200px" alt="south_calm_body_of_water">
+						</div>
 					</div>
 					<div class="next2 horizontally_stacked carousel_arrow"><i class="fas fa-angle-right"></i></div>
 				</div>

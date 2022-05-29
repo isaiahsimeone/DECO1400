@@ -79,4 +79,3 @@ function doPost() {
     // Append review to page
     review_container.appendChild(review_wrapper);
 }
-

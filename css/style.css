@@ -253,23 +253,23 @@ html,body {
 
 .carousel {
 	width:85%;
-	background-color: #1a1a1a;
+	background-color: #4b6344;
 }
 
 .carousel_item {
 	background-color:#4b6344;
 	margin: 10px;
-	padding:100px;
+	padding: 0px;
 }
 
 .carousel_arrow {
-	position:relative;
-	padding-top:110px;
-	padding-bottom:110px;
-	padding-left:0px;
-	padding-right:0px;
-	top:-115px;
-	width:20px;
+	position: relative;
+	padding-top: 110px;
+	padding-bottom: 110px;
+	padding-left: 0px;
+	padding-right: 0px;
+	top: -115px;
+	width: 20px;
 }
 
 
