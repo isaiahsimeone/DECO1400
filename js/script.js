@@ -51,7 +51,7 @@ function doPost() {
     var reviewer_name = document.getElementById("reviewer_name").value;
     var review_content = document.getElementById("review_content_text").value;
 
-    // Don't allow excessively long input.
+    // Don't allow excessively long input
     if (reviewer_name.length > 10) {
         alert("Name too long!");
         return ;

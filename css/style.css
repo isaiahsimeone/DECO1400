@@ -94,7 +94,7 @@ html,body {
 }
 
 /** Buttons **/
-#deals_button {
+.deals_button {
 	display: inline-block;
 	text-decoration: none;
 	background-color: #4b6344;
@@ -106,8 +106,8 @@ html,body {
 	margin-bottom: 40px;
 }
 
-#deals_button:hover {
-	background-color: #4b8844;
+.deals_button:hover {
+	background-color: #4b6344;
 }
 
 
@@ -195,24 +195,31 @@ html,body {
 	float: left;
 	height:150px;
 	width:150px;
-	background-color: green;
+	/* Image specific */
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
 }
 
 .deal_price {
 	float: right;
 	height: 130px;
-	width: 60px;
+	width: 90px;
 	padding-top:20px;
-	background-color: red;
+	color: white;
+	font-family: Arial;
+	background-color:#4b6344;
 	text-align: center;
 }
 
 .deal_description {
-	width:420px;
+	width:390px;
 	height:150px;
 	display:inline-block;
 	margin:auto;
-	background-color:orange;
+	color: white;
+	font-family: Arial;
+	background-color:#4b6344;
 	padding-left:10px;
 	padding-right:10px;
 }
@@ -260,6 +267,21 @@ html,body {
 	background-color:#4b6344;
 	margin: 10px;
 	padding: 0px;
+	overflow:hidden;
+}
+
+.carousel_item_overlay {
+	float: left;
+	width:220px;
+	height:80px;
+	background-color: #4b6344df;
+	color:white;
+	font-family: Arial;
+	font-size: 13px;
+	padding:5px;
+	padding-left:10px;
+	overflow:hidden;
+	overflow-wrap: break-word;
 }
 
 .carousel_arrow {
@@ -272,6 +294,12 @@ html,body {
 	width: 20px;
 }
 
+.image_cover {
+	/* Image specific */
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
 
 /******* Media Queries *******/
 
@@ -300,14 +328,6 @@ html,body {
 	}
 }
 
-@media screen and (max-width: 680px) {
-	/* break experiences pages north/south island divs */
-	#experiences_island_wrapper {
-		display:none;
-		visibility:hidden;
-	}
-}
-
 @media screen and (max-width: 736px) {
 	/* reposition carousel arrows */
 	.carousel_arrow {
@@ -315,7 +335,20 @@ html,body {
 		padding-bottom: 225px;
 		top:-230px;
 	}
+	.carousel_item_overlay {
+		width: 150px;
+	}
+}
 
+@media screen and (max-width: 680px) {
+	/* break experiences pages north/south island divs */
+	#experiences_island_wrapper {
+		display:none;
+		visibility:hidden;
+	}
+	.carousel_item_overlay {
+		width: 120px;
+	}
 }
 
 @media screen and (max-width: 367px) {
