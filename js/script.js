@@ -44,12 +44,23 @@ window.onload = function(event) {
 }
 
 /* Post a new review on review page */
+// Not saved serverside or in cookie, no xss risk
 function doPost() {
     var review_container = document.getElementById("review_content");
     // Get review inputs
     var reviewer_name = document.getElementById("reviewer_name").value;
     var review_content = document.getElementById("review_content_text").value;
-    
+
+    // Don't allow excessively long input.
+    if (reviewer_name.length > 10) {
+        alert("Name too long!");
+        return ;
+    }
+    if (review_content.length > 100) {
+        alert("Message too long!")
+        return ;
+    }
+            
     // Get formatted date
     var date = new Date(Date.now());
     var weekdays = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"]
@@ -65,12 +76,12 @@ function doPost() {
     review_meta.classList += "review_meta";
 
     // Apped to review meta header tags
-    review_meta_date.appendChild(document.createTextNode(date_str));
     review_meta_name.appendChild(document.createTextNode(reviewer_name));
+    review_meta_date.appendChild(document.createTextNode(date_str));
 
     // Append metadata to review meta
-    review_meta.appendChild(review_meta_date);
     review_meta.appendChild(review_meta_name);
+    review_meta.appendChild(review_meta_date);
     
     // Append to review div
     review_wrapper.appendChild(review_meta);
