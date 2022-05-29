@@ -2,7 +2,6 @@
  * New Zealand Adventures
  * Author: s4434012
  */
-
 /* Toggle dropdown menu */
 function dropdown() {
     window.dropdown_visible = !window.dropdown_visible
